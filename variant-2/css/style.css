@@ -331,9 +331,9 @@ html:not(.js) #pre { display: none; }
 .numbers span { display: block; margin-top: 12px; font: 500 12px/1.4 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.75); }
 .vcard { width: min(420px, 85vw); display: flex; flex-direction: column; background: #fbf6ee; color: var(--text); border-radius: 10px; overflow: hidden; border: 1px solid rgba(197,154,91,.5); }
 .vcard img { aspect-ratio: 16 / 10; width: 100%; object-fit: cover; object-position: 50% 22%; pointer-events: none; }
-.vcard blockquote { position: relative; flex: 1; padding: 30px 28px 18px 28px; font: italic 400 18.5px/1.5 var(--serif); }
-.vcard blockquote::before { content: '\201C'; position: absolute; left: 22px; top: -8px; font: 400 64px/1 var(--serif); color: var(--bronze); }
-.vcard figcaption { margin: 0 28px 26px; padding-top: 16px; border-top: 1px solid #e6d9c4; font: 400 14px/1.4 var(--sans); color: var(--muted); }
+.vcard blockquote { flex: 1; padding: 22px 26px; font: italic 400 17px/1.55 var(--serif); }
+.vcard blockquote::before { content: '\201C'; display: block; height: 24px; margin-bottom: 10px; font: 400 56px/.85 var(--serif); color: var(--bronze); }
+.vcard figcaption { margin: 0 26px 24px; padding-top: 16px; border-top: 1px solid #e6d9c4; font: 400 14px/1.4 var(--sans); color: var(--muted); }
 .vcard figcaption b { display: block; font: 500 13px var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--heading); margin-bottom: 4px; }
 
 /* ---------- 10 plan ---------- */
