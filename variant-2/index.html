@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="img/logo.png">
+<title>Asli Hyderabad · Curated Hyderabad Experiences</title>
+<meta name="description" content="Privately curated journeys into Hyderabad's heritage, living culture and extraordinary experiences, hosted by people who call it home.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-1.webp">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Shared shapes: the cusped Qutb Shahi arch (image mask) and line icons (pathLength=1 so CSS can draw them in) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="arch" clipPathUnits="objectBoundingBox">
+      <path d="M0,1 L0,.46 Q-0.014,0.350 0.035,0.27 Q0.052,0.176 0.12,0.13 Q0.167,0.058 0.25,0.045 Q0.304,-0.006 0.38,0.01 Q0.436,-0.030 0.5,0 Q0.564,-0.030 0.62,0.01 Q0.696,-0.006 0.75,0.045 Q0.833,0.058 0.88,0.13 Q0.948,0.176 0.965,0.27 Q1.014,0.350 1,0.46 L1,1 Z"/>
+    </clipPath>
+  </defs>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arch" viewBox="0 0 24 24"><path pathLength="1" d="M5 21V10a7 7 0 0 1 14 0v11M9 21v-7a3 3 0 0 1 6 0v7M3 21h18"/></symbol>
+  <symbol id="i-host" viewBox="0 0 24 24"><path pathLength="1" d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 11a2.5 2.5 0 1 0 0-5M17 14c2.4.4 4 2.6 4 5"/></symbol>
+  <symbol id="i-palace" viewBox="0 0 24 24"><path pathLength="1" d="M4 21V11h16v10M2 21h20M8 11V8a4 4 0 0 1 8 0v3M12 4V2M9 21v-5h6v5"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path pathLength="1" d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2zM9 4v14M15 6v14"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path pathLength="1" d="M4 17h16M6 17a6 6 0 0 1 12 0M12 11V8M10 8h4M3 20h18"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path pathLength="1" d="M3 16v-4l2.5-5h13l2.5 5v4zM3 16v2h3v-2M18 16v2h3v-2M3 12h18"/></symbol>
+  <symbol id="i-mina" viewBox="0 0 24 24"><path pathLength="1" d="M4 21V8M8 21V8M16 21V8M20 21V8M4 8V4M20 8V4M8 13h8M8 21v-4a4 4 0 0 1 8 0v4M2 21h20"/></symbol>
+  <symbol id="i-gem" viewBox="0 0 24 24"><path pathLength="1" d="M6 4h12l3 5-9 11L3 9zM3 9h18M9 4l3 16M15 4l-3 16"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path pathLength="1" d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3l-5.5 2.9 1-6.2L3 9.6l6.2-.9z"/></symbol>
+  <symbol id="i-group" viewBox="0 0 24 24"><path pathLength="1" d="M12 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 20c0-3.3 2.7-6 6-6s6 2.7 6 6M5 11a2 2 0 1 0 0-4M19 11a2 2 0 1 0 0-4M2 18c0-2 1.2-3.5 3-4M22 18c0-2-1.2-3.5-3-4"/></symbol>
+</svg>
+
+<div id="pre" aria-hidden="true">
+  <svg viewBox="-0.05 -0.05 1.1 1.1" class="pre-arch"><path pathLength="1" d="M0,1 L0,.46 Q-0.014,0.350 0.035,0.27 Q0.052,0.176 0.12,0.13 Q0.167,0.058 0.25,0.045 Q0.304,-0.006 0.38,0.01 Q0.436,-0.030 0.5,0 Q0.564,-0.030 0.62,0.01 Q0.696,-0.006 0.75,0.045 Q0.833,0.058 0.88,0.13 Q0.948,0.176 0.965,0.27 Q1.014,0.350 1,0.46 L1,1"/></svg>
+  <img src="img/logo.png" alt="" class="pre-logo logo-white">
+</div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <a href="/" class="hdr-logo" aria-label="Asli Hyderabad home"><img src="img/logo.png" alt="Asli Hyderabad" width="170" height="51" class="logo-white"></a>
+  <nav class="hdr-nav" id="nav" aria-label="Main">
+    <a href="/tours">Experiences</a>
+    <a href="/originals">Originals</a>
+    <a href="/conventions">Delegates</a>
+    <a href="#private-access">Private Access</a>
+    <a href="#story">Our Story</a>
+    <div class="nav-contact">
+      <a href="https://wa.me/919392149872">WhatsApp</a>
+      <a href="tel:+919392149872">+91 93921 49872</a>
+    </div>
+  </nav>
+  <a href="#plan" class="btn btn-gold hdr-cta">Plan Your Visit <svg class="arw"><use href="#i-arrow"/></svg></a>
+  <button class="burger" id="burger" aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+</header>
+
+<main id="main">
+
+<!-- 1 · Hero -->
+<section class="hero" id="hero" tabindex="-1" data-scrub="out" aria-roledescription="carousel" aria-label="Hyderabad highlights">
+  <h1 class="sr-only">Asli Hyderabad: privately curated Hyderabad experiences</h1>
+  <div class="hero-bg">
+    <div class="slides">
+      <div class="slide on"><img src="img/hero-1.webp" alt="A carved palace balcony at sunset overlooking the Charminar"></div>
+      <div class="slide"><img src="img/hero-2.webp" alt="A lantern-lit palace staircase at dusk" loading="lazy"></div>
+      <div class="slide"><img src="img/hero-3.webp" alt="A fountain terrace of a palace at sunset" loading="lazy"></div>
+      <div class="slide"><img src="img/hero-4.webp" alt="Golconda Fort glowing at sunset" loading="lazy"></div>
+    </div>
+  </div>
+  <div class="hero-in">
+    <div class="hero-titles">
+      <p class="hero-t on"><span class="ln"><span>Hyderabad,</span></span><span class="ln"><span><em>beyond</em> the expected.</span></span></p>
+      <p class="hero-t"><span class="ln"><span>Palaces that</span></span><span class="ln"><span><em>still</em> remember.</span></span></p>
+      <p class="hero-t"><span class="ln"><span>Evenings</span></span><span class="ln"><span><em>made</em> for you.</span></span></p>
+      <p class="hero-t"><span class="ln"><span>Four centuries,</span></span><span class="ln"><span><em>one</em> city.</span></span></p>
+    </div>
+    <i class="rule"></i>
+    <p class="hero-sub">Privately curated journeys into the city's heritage, living culture and extraordinary experiences.</p>
+    <div class="btns">
+      <a href="/tours" class="btn btn-gold">Explore Experiences <svg class="arw"><use href="#i-arrow"/></svg></a>
+      <a href="#plan" class="btn btn-line">Design My Visit <svg class="arw"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+  <div class="bars" role="tablist" aria-label="Choose slide">
+    <button role="tab" aria-label="Slide 1" aria-selected="true" class="on"><span></span></button>
+    <button role="tab" aria-label="Slide 2" aria-selected="false"><span></span></button>
+    <button role="tab" aria-label="Slide 3" aria-selected="false"><span></span></button>
+    <button role="tab" aria-label="Slide 4" aria-selected="false"><span></span></button>
+  </div>
+  <a href="#story" class="cue">Scroll<i></i></a>
+</section>
+
+<!-- 2 · Our story -->
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div class="story-text">
+      <p class="eyebrow" data-reveal>Asli Hyderabad <i class="rule"></i></p>
+      <h2 class="h2" data-reveal><span class="ln"><span>A city of many stories.</span></span><span class="ln"><span>A <em>more personal</em> way</span></span><span class="ln"><span>to discover them.</span></span></h2>
+      <p class="lead" data-reveal>Asli Hyderabad curates immersive, personalised journeys rooted in the city's heritage, cuisine, living culture and local knowledge. We go beyond the expected to offer authentic experiences that connect you to the real Hyderabad.</p>
+      <ul class="pillars st" data-reveal>
+        <li><svg class="ico"><use href="#i-arch"/></svg><h3>Curated Experiences</h3><p>Thoughtfully designed journeys, beyond the usual.</p></li>
+        <li><svg class="ico"><use href="#i-host"/></svg><h3>Local Hosts</h3><p>Passionate insiders who bring the city to life.</p></li>
+        <li><svg class="ico"><use href="#i-palace"/></svg><h3>Luxury Hotel Connections</h3><p>Exclusive access to Hyderabad's finest stays.</p></li>
+        <li><svg class="ico"><use href="#i-map"/></svg><h3>Personalised Itineraries</h3><p>Tailored to your interests, pace and travel style.</p></li>
+      </ul>
+    </div>
+    <div class="story-media">
+      <figure class="arch-img" data-reveal data-scrub><img src="img/story.webp" alt="A guest in a teal dupatta walking a marble arcade towards the Charminar" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · Asli Originals -->
+<section class="originals" id="originals" data-scrub>
+  <img src="img/etch-l.webp" alt="" class="etch etch-l" aria-hidden="true">
+  <img src="img/etch-r.webp" alt="" class="etch etch-r" aria-hidden="true">
+  <div class="wrap">
+    <header class="sec-head center">
+      <p class="eyebrow" data-reveal><i class="rule"></i> Signature Experiences <i class="rule"></i></p>
+      <svg class="ico ornament" data-reveal><use href="#i-mina"/></svg>
+      <h2 class="h2" data-reveal><span class="ln"><span>Extraordinary Hyderabad,</span></span><span class="ln"><span><em>curated for you.</em></span></span></h2>
+      <p class="lead" data-reveal>Only in Hyderabad, only with Asli: our own experiences, on a fixed rhythm through the week and the year.</p>
+    </header>
+    <div class="cards4 rail st" data-reveal>
+      <a class="ocard" href="/originals/dawn"><figure><img src="img/phase-1.webp" alt="Golconda Fort walls in early light" loading="lazy"><span class="tag">Sundays · 6:30 AM</span></figure><h3>Dawn</h3><p>The old city before it wakes: Irani chai, first light on the Charminar, bazaars lifting their shutters.</p><span class="tlink">Explore <svg class="arw"><use href="#i-arrow"/></svg></span></a>
+      <a class="ocard" href="/originals/welcome-hyderabad"><figure><img src="img/orig-1.webp" alt="A palace salon with arches and chandeliers" loading="lazy"><span class="tag">Saturdays · 11 AM</span></figure><h3>Welcome Hyderabad</h3><p>A first afternoon in the city, hosted with stories, tea and the people who know it best.</p><span class="tlink">Explore <svg class="arw"><use href="#i-arrow"/></svg></span></a>
+      <a class="ocard" href="/originals/the-hyderabad-table"><figure><img src="img/orig-2.webp" alt="Biryani and Hyderabadi dishes on a terrace table at dusk" loading="lazy"><span class="tag">Monthly</span></figure><h3>The Hyderabad Table</h3><p>A long table, a family recipe and a host who cooks the Hyderabad you won't find on a menu.</p><span class="tlink">Explore <svg class="arw"><use href="#i-arrow"/></svg></span></a>
+      <a class="ocard" href="/originals/after-dark"><figure><img src="img/orig-4.webp" alt="A dancer performing before the lit Charminar at night" loading="lazy"><span class="tag">Select Fridays · 7 PM</span></figure><h3>After Dark</h3><p>Lanterns, music and the lanes of the old city once the heat of the day lifts.</p><span class="tlink">Explore <svg class="arw"><use href="#i-arrow"/></svg></span></a>
+    </div>
+    <i class="rail-bar" aria-hidden="true"></i>
+    <p class="center" data-reveal><a href="/originals" class="btn btn-gold">View All Originals <svg class="arw"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<!-- 4 · Six themes -->
+<section class="themes" id="themes">
+  <div class="wrap">
+    <header class="sec-head center">
+      <p class="eyebrow" data-reveal>Asli Hyderabad</p>
+      <h2 class="h2" data-reveal><span class="ln"><span>Journeys for <em>every interest.</em></span></span></h2>
+      <i class="rule orn" data-reveal></i>
+      <p class="lead" data-reveal>Six ways into the city. Choose what draws you in.</p>
+    </header>
+  </div>
+  <div class="accordion st" data-reveal>
+    <a class="tcard" href="/experiences/heritage"><img src="img/theme-1.webp" alt="" loading="lazy"><div><h3>Heritage</h3><p><b>Walk through centuries.</b> Forts, palaces and the old quarters.</p><span class="circ"><svg class="arw"><use href="#i-arrow"/></svg></span></div></a>
+    <a class="tcard" href="/experiences/culture"><img src="img/theme-2.webp" alt="" loading="lazy"><div><h3>Culture</h3><p><b>Taste. Make. Celebrate.</b> Food, crafts, bazaars and traditions.</p><span class="circ"><svg class="arw"><use href="#i-arrow"/></svg></span></div></a>
+    <a class="tcard" href="/experiences/cinema"><img src="img/theme-6.webp" alt="" loading="lazy"><div><h3>Cinema</h3><p><b>Step behind the screen.</b> Studios, sets and Telugu cinema.</p><span class="circ"><svg class="arw"><use href="#i-arrow"/></svg></span></div></a>
+    <a class="tcard" href="/experiences/business"><img src="img/theme-4.webp" alt="" loading="lazy"><div><h3>Business</h3><p><b>Meet the city that builds.</b> Innovation, enterprise and industry.</p><span class="circ"><svg class="arw"><use href="#i-arrow"/></svg></span></div></a>
+    <a class="tcard" href="/experiences/wellness"><img src="img/theme-5.webp" alt="" loading="lazy"><div><h3>Wellness</h3><p><b>Slow down. Restore.</b> Nature, movement and restorative experiences.</p><span class="circ"><svg class="arw"><use href="#i-arrow"/></svg></span></div></a>
+    <a class="tcard" href="/experiences/learning"><img src="img/theme-3.webp" alt="" loading="lazy"><div><h3>Learning</h3><p><b>See. Meet. Understand.</b> Learning journeys through institutions and industries.</p><span class="circ"><svg class="arw"><use href="#i-arrow"/></svg></span></div></a>
+  </div>
+</section>
+
+<!-- 5 · Delegates -->
+<section class="delegates" id="delegates">
+  <div class="del-media"><figure class="arch-img sq" data-reveal><img src="img/delegates.webp" alt="Conference delegates talking over tea on a terrace facing the Charminar" loading="lazy"></figure></div>
+  <div class="del-text">
+    <h2 class="h2" data-reveal><span class="ln"><span>Make more of your time</span></span><span class="ln"><span>in <em>Hyderabad.</em></span></span></h2>
+    <i class="rule orn" data-reveal></i>
+    <p class="lead" data-reveal>Curated city experiences for international delegates: before, between and after your conference sessions.</p>
+    <div class="phases" data-scrub>
+      <i class="phase-line" aria-hidden="true"></i>
+      <article class="pcard" data-reveal><img src="img/phase-1.webp" alt="" loading="lazy"><h3><span class="dot"></span>Before your event</h3><p>Arrive early and uncover centuries of history, culture and world-class hospitality.</p></article>
+      <article class="pcard" data-reveal><img src="img/phase-2.webp" alt="" loading="lazy"><h3><span class="dot"></span>Between sessions</h3><p>Short, enriching experiences designed for your schedule: culture, cuisine and wellness.</p></article>
+      <article class="pcard" data-reveal><img src="img/phase-3.webp" alt="" loading="lazy"><h3><span class="dot"></span>After the conference</h3><p>Extend your stay with day trips and unforgettable evenings.</p></article>
+    </div>
+    <div class="btns" data-reveal>
+      <a href="/conventions" class="btn btn-ink">Explore Delegate Experiences <svg class="arw"><use href="#i-arrow"/></svg></a>
+      <button type="button" class="tlink" id="find-event">Find your conference <svg class="arw"><use href="#i-arrow"/></svg></button>
+    </div>
+    <ul class="mini st" data-reveal>
+      <li><svg class="ico"><use href="#i-group"/></svg>Private Groups</li>
+      <li><svg class="ico"><use href="#i-palace"/></svg>Hotel Coordination</li>
+      <li><svg class="ico"><use href="#i-host"/></svg>Local Hosts</li>
+      <li><svg class="ico"><use href="#i-map"/></svg>Tailored Itineraries</li>
+    </ul>
+  </div>
+</section>
+
+<dialog class="drawer" id="drawer" aria-labelledby="drawer-h">
+  <div class="drawer-in">
+    <button type="button" class="x" id="drawer-x" aria-label="Close">×</button>
+    <h2 id="drawer-h" class="h3">Find your conference</h2>
+    <label class="field"><span>Search events or venues</span><input type="search" id="ev-q" placeholder="e.g. HICC, pharma"></label>
+    <ul class="ev-list" id="ev-list"></ul>
+    <a href="/conventions" class="tlink">All conventions <svg class="arw"><use href="#i-arrow"/></svg></a>
+  </div>
+</dialog>
+
+<!-- 6 · Private Access: pinned, doors open with scroll -->
+<section class="private" id="private-access" data-scrub="pin">
+  <div class="private-stage">
+    <div class="pa-text">
+      <h2 class="h2"><span class="ln"><span>Some experiences</span></span><span class="ln"><span>begin where the</span></span><span class="ln"><span><em>guidebook ends.</em></span></span></h2>
+      <i class="rule"></i>
+      <p class="lead">Go beyond the usual with access to royal heritage spaces, private homes, artisan studios and carefully curated encounters, made possible through our trusted local networks.</p>
+      <a href="/contact" class="btn btn-gold">Enquire for Private Access <svg class="arw"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="pa-scene" aria-hidden="true">
+      <img src="img/courtyard.webp" alt="" class="pa-court">
+      <i class="door door-l"></i><i class="door door-r"></i>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Workshops -->
+<section class="workshops" id="workshops" data-scrub>
+  <img src="img/hero-1.webp" alt="" class="ws-bg" aria-hidden="true" loading="lazy">
+  <div class="wrap">
+    <header class="sec-head row">
+      <div>
+        <p class="eyebrow" data-reveal>Asli Hyderabad <i class="rule"></i></p>
+        <h2 class="h2" data-reveal><span class="ln"><span>Learn. Create.</span></span><span class="ln"><span><em>Take a piece</em> of Hyderabad with you.</span></span></h2>
+        <p class="lead" data-reveal>Hands-on cultural encounters that bring you closer to the people, crafts and traditions that make Hyderabad extraordinary.</p>
+      </div>
+      <div class="arrows" data-reveal>
+        <button type="button" class="circ prev" aria-label="Previous workshops" data-rail="ws"><svg class="arw flip"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="circ next" aria-label="Next workshops" data-rail="ws"><svg class="arw"><use href="#i-arrow"/></svg></button>
+      </div>
+    </header>
+  </div>
+  <div class="rail drag st" id="ws" data-reveal>
+    <article class="wcard"><figure><img src="img/work-1.webp" alt="Hands shaping lac bangles" loading="lazy"></figure><h3>Lac Bangle Workshop</h3><p>Craft your own bangle with master artisans near Laad Bazaar.</p><p class="meta"><span><svg class="ico in"><use href="#i-host"/></svg>Artisan-led</span><span>Price on request</span></p><a href="#plan" class="book">Book now <svg class="arw"><use href="#i-arrow"/></svg></a></article>
+    <article class="wcard"><figure><img src="img/work-3.webp" alt="An artisan inlaying silver into a Bidri vase" loading="lazy"></figure><h3>Bidri Craft Experience</h3><p>Discover the centuries-old art of Bidri with master craftspeople.</p><p class="meta"><span><svg class="ico in"><use href="#i-host"/></svg>Artisan-led</span><span>Price on request</span></p><a href="#plan" class="book">Book now <svg class="arw"><use href="#i-arrow"/></svg></a></article>
+    <article class="wcard"><figure><img src="img/work-pearl.webp" alt="Pearls and an engraved silver vessel on teal velvet" loading="lazy"></figure><h3>The Pearl Experience</h3><p>Learn to read, sort and string Hyderabad's famous pearls.</p><p class="meta"><span><svg class="ico in"><use href="#i-host"/></svg>Artisan-led</span><span>Price on request</span></p><a href="#plan" class="book">Book now <svg class="arw"><use href="#i-arrow"/></svg></a></article>
+    <article class="wcard"><figure><img src="img/work-4.webp" alt="Qawwali singers performing in a heritage hall" loading="lazy"></figure><h3>Sufi Music Evening</h3><p>An intimate night of soulful qawwali in a heritage setting.</p><p class="meta"><span><svg class="ico in"><use href="#i-group"/></svg>Live performance</span><span>Price on request</span></p><a href="#plan" class="book">Book now <svg class="arw"><use href="#i-arrow"/></svg></a></article>
+  </div>
+  <p class="center" data-reveal><a href="/services" class="btn btn-line">View All Workshops <svg class="arw"><use href="#i-arrow"/></svg></a></p>
+</section>
+
+<!-- 8 · Partners / hosted -->
+<section class="hosted" id="hosted" data-scrub>
+  <div class="hosted-bg"><img src="img/hosted.webp" alt="" loading="lazy"></div>
+  <div class="wrap">
+    <div class="hosted-text">
+      <p class="eyebrow" data-reveal>Asli Hyderabad <i class="rule"></i></p>
+      <h2 class="h2" data-reveal><span class="ln"><span>Thoughtfully connected.</span></span><span class="ln"><span><em>Seamlessly</em> hosted.</span></span></h2>
+      <p class="lead" data-reveal>We work with Hyderabad's leading hotels and trusted cultural partners to create seamless guest experiences, from arrival to exploration.</p>
+      <ul class="mini light st" data-reveal>
+        <li><svg class="ico"><use href="#i-bell"/></svg>Hotel Guest Coordination</li>
+        <li><svg class="ico"><use href="#i-car"/></svg>Premium Transfers</li>
+        <li><svg class="ico"><use href="#i-mina"/></svg>Trusted Local Access</li>
+      </ul>
+      <p data-reveal><a href="/partners" class="btn btn-gold">Explore Partner Experiences <svg class="arw"><use href="#i-arrow"/></svg></a></p>
+    </div>
+  </div>
+  <div class="marquee" aria-label="Featured brands">
+    <div class="marquee-track">
+      <ul><li>Taj Falaknuma</li><li>Café Niloufer</li><li>Goyaz</li><li>Ramoji Film City</li><li>Paradise</li><li>HICC</li><li>Heartfulness</li><li>Karachi Bakery</li><li>Shilparamam</li></ul>
+      <ul aria-hidden="true"><li>Taj Falaknuma</li><li>Café Niloufer</li><li>Goyaz</li><li>Ramoji Film City</li><li>Paradise</li><li>HICC</li><li>Heartfulness</li><li>Karachi Bakery</li><li>Shilparamam</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · Proof: numbers + voices -->
+<section class="voices" id="voices">
+  <img src="img/voices-bg.webp" alt="" class="voices-bg" aria-hidden="true" loading="lazy">
+  <div class="wrap">
+    <ul class="numbers st" data-reveal>
+      <li><b data-count="45">45</b>+<span>Conferences &amp; events</span></li>
+      <li><b data-count="275">275</b>+<span>Curated experiences</span></li>
+      <li><b data-count="30">30</b>+<span>Partners &amp; local businesses</span></li>
+      <li><b data-count="55">55</b>+<span>Cities &amp; countries</span></li>
+    </ul>
+    <header class="sec-head row">
+      <div>
+        <h2 class="h2" data-reveal><span class="ln"><span>Personal stories.</span></span><span class="ln"><span><em>Lasting</em> impressions.</span></span></h2>
+        <p class="lead" data-reveal>Notes from travellers, hosts and delegates who experienced Hyderabad with us.</p>
+      </div>
+      <div class="arrows" data-reveal>
+        <button type="button" class="circ prev" aria-label="Previous testimonial" data-rail="vc"><svg class="arw flip"><use href="#i-arrow"/></svg></button>
+        <button type="button" class="circ next" aria-label="Next testimonial" data-rail="vc"><svg class="arw"><use href="#i-arrow"/></svg></button>
+      </div>
+    </header>
+  </div>
+  <div class="rail drag st" id="vc" data-reveal data-auto="6000">
+    <figure class="vcard"><img src="img/guest-zev.webp" alt="Zev Siegl" loading="lazy"><blockquote>My visit to Hyderabad became much more meaningful because of the thoughtfully curated experiences by Asli Hyderabad. Rather than simply showing the city, the team helped me understand its history, culture and people in an authentic and seamless way. It's an impressive model that has the potential to enhance how business travellers and conference delegates experience Indian cities.</blockquote><figcaption><b>Zev Siegl</b>Co-founder, Starbucks Coffee Company</figcaption></figure>
+    <figure class="vcard"><img src="img/guest-nick.webp" alt="Nick Ut" loading="lazy"><blockquote>I experienced Asli Hyderabad's services during my visit to the Hyderabad Photography Festival. The team was professional, thoughtful and highly responsive, taking excellent care of every aspect of my visit. Their local knowledge, attention to detail and warm hospitality made my experience in Hyderabad truly enjoyable.</blockquote><figcaption><b>Nick Ut</b>Pulitzer Prize-winning photojournalist</figcaption></figure>
+    <figure class="vcard"><img src="img/guest-barbara.webp" alt="Barbara Davidson" loading="lazy"><blockquote>During my visit to Hyderabad, Asli Hyderabad made every part of the experience seamless and memorable. From thoughtful planning to flawless coordination, the team demonstrated genuine hospitality, professionalism and a deep understanding of the city's culture. It allowed me to focus on my work while experiencing the true spirit of Hyderabad.</blockquote><figcaption><b>Barbara Davidson</b>Pulitzer Prize-winning photojournalist</figcaption></figure>
+    <figure class="vcard"><img src="img/guest-isabelle.webp" alt="Isabelle Duceller" loading="lazy"><blockquote>During my visit to Hyderabad, I experienced Asli Hyderabad's thoughtful and professional hospitality. The team understood my requirements, coordinated every detail seamlessly and introduced me to the city with genuine warmth and local insight. Their support made my time in Hyderabad both effortless and memorable.</blockquote><figcaption><b>Isabelle Duceller</b>CEO, BioGaia, Sweden</figcaption></figure>
+  </div>
+</section>
+
+<!-- 10 · Plan your visit -->
+<section class="plan" id="plan">
+  <div class="plan-media" data-scrub><img src="img/plan.webp" alt="" loading="lazy"></div>
+  <div class="wrap plan-grid">
+    <div class="plan-text">
+      <p class="eyebrow" data-reveal>Asli Hyderabad <i class="rule"></i></p>
+      <h2 class="h2" data-reveal><span class="ln"><span>Let's design your</span></span><span class="ln"><span><em>Hyderabad</em> experience.</span></span></h2>
+      <p class="lead" data-reveal>Share your travel dates, interests, hotel or conference details, and our team will shape a personalised Hyderabad experience for you.</p>
+      <ul class="mini st" data-reveal>
+        <li><svg class="ico"><use href="#i-gem"/></svg>Curated itineraries</li>
+        <li><svg class="ico"><use href="#i-group"/></svg>Dedicated support</li>
+        <li><svg class="ico"><use href="#i-bell"/></svg>Premium experiences</li>
+        <li><svg class="ico"><use href="#i-star"/></svg>Individuals &amp; delegations</li>
+      </ul>
+    </div>
+    <div class="form-card" data-reveal>
+      <form id="plan-form" method="post" novalidate>
+        <p class="eyebrow center"><i class="rule"></i> Plan Your Visit <i class="rule"></i></p>
+        <div class="fgrid">
+          <label class="field"><span>Full name *</span><input name="name" required autocomplete="name" aria-describedby="e-name"><em id="e-name" class="err"></em></label>
+          <label class="field"><span>Email *</span><input name="email" type="email" required autocomplete="email" aria-describedby="e-email"><em id="e-email" class="err"></em></label>
+          <label class="field"><span>Arriving *</span><input name="from" type="date" required aria-describedby="e-from"><em id="e-from" class="err"></em></label>
+          <label class="field"><span>Leaving *</span><input name="to" type="date" required aria-describedby="e-to"><em id="e-to" class="err"></em></label>
+          <label class="field"><span>Hotel or event</span><input name="stay" placeholder="Hotel name or conference"></label>
+          <label class="field"><span>Number of guests</span><input name="guests" type="number" min="1" max="500" inputmode="numeric" aria-describedby="e-guests"><em id="e-guests" class="err"></em></label>
+        </div>
+        <fieldset class="chips">
+          <legend>Interests</legend>
+          <label><input type="checkbox" name="interest" value="Heritage"><span>Heritage</span></label>
+          <label><input type="checkbox" name="interest" value="Culture"><span>Culture</span></label>
+          <label><input type="checkbox" name="interest" value="Cinema"><span>Cinema</span></label>
+          <label><input type="checkbox" name="interest" value="Business"><span>Business</span></label>
+          <label><input type="checkbox" name="interest" value="Wellness"><span>Wellness</span></label>
+          <label><input type="checkbox" name="interest" value="Learning"><span>Learning</span></label>
+        </fieldset>
+        <label class="field"><span>Message (optional)</span><textarea name="msg" rows="3" maxlength="1500"></textarea></label>
+        <button class="btn btn-ink wide">Prepare My Enquiry <svg class="arw"><use href="#i-arrow"/></svg></button>
+      </form>
+      <div class="sent" id="sent" hidden tabindex="-1">
+        <svg class="ico big"><use href="#i-mina"/></svg>
+        <h3 class="h3">Your enquiry is ready.</h3>
+        <p>Send it to us on WhatsApp or by email. We reply within 24 hours.</p>
+        <div class="btns center">
+          <a id="send-wa" class="btn btn-ink" target="_blank" rel="noopener">Send on WhatsApp</a>
+          <a id="send-mail" class="btn btn-line dark">Send by email</a>
+        </div>
+        <button type="button" class="tlink" id="edit-enquiry">Edit details</button>
+      </div>
+      <div class="direct">
+        <p class="eyebrow center">Or contact us directly</p>
+        <a href="mailto:sahana@aslihyd.in">sahana@aslihyd.in</a>
+        <a href="tel:+919392149872">+91 93921 49872 <small>(WhatsApp available)</small></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <img src="img/footer.webp" alt="" class="ftr-bg" aria-hidden="true" loading="lazy">
+  <div class="wrap">
+    <p class="ftr-rule"><span>More than a destination</span><svg class="ico in"><use href="#i-gem"/></svg><span>A deeper connection</span></p>
+    <div class="ftr-grid">
+      <div class="ftr-brand">
+        <img src="img/logo.png" alt="Asli Hyderabad" width="200" height="60">
+        <p>Curated destination experiences, conference programmes and authentic local stories that bring Hyderabad to life.</p>
+      </div>
+      <nav aria-label="Experiences"><h3>Experiences</h3><a href="/tours">All Tours</a><a href="/originals">Asli Originals</a><a href="/experiences/heritage">Heritage</a><a href="/experiences/culture">Culture</a><a href="#private-access">Private Access</a><a href="/gallery">Gallery</a></nav>
+      <nav aria-label="Delegate services"><h3>Delegates</h3><a href="/conventions">Conventions</a><a href="/services">Add-ons &amp; Services</a><a href="#workshops">Workshops</a><a href="/book-now">Book an Experience</a></nav>
+      <div class="ftr-contact">
+        <h3>Contact</h3>
+        <a href="mailto:sahana@aslihyd.in">sahana@aslihyd.in</a>
+        <a href="tel:+919392149872">+91 93921 49872</a>
+        <a href="https://wa.me/919392149872">WhatsApp us</a>
+        <p>Hyderabad, Telangana, India</p>
+      </div>
+    </div>
+  </div>
+  <div class="ftr-bar">
+    <div class="wrap">
+      <span>© 2026 Asli Hyderabad. All rights reserved.</span>
+      <span><a href="/contact">Contact</a> · <a href="#">Privacy</a> · <a href="#">Terms</a></span>
+      <em>Designed for meaningful journeys.</em>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919392149872" class="wa" id="wa" aria-label="Chat on WhatsApp"><img src="img/whatsapp.svg" alt="" width="54" height="54"></a>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
