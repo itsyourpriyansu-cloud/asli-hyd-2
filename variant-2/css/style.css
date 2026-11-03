@@ -44,7 +44,7 @@ em { font-style: italic; color: var(--bronze); }
 .lead { font: 400 clamp(19px, 1.5vw, 22px)/1.5 var(--serif); color: var(--text); margin-top: 22px; max-width: 620px; }
 .center .lead, .lead.center { margin-inline: auto; }
 .eyebrow { display: flex; align-items: center; gap: 16px; font: 500 12px/1 var(--sans); letter-spacing: .32em; text-transform: uppercase; color: var(--bronze); margin-bottom: 22px; }
-.eyebrow.center { justify-content: center; }
+.eyebrow.center, .sec-head.center .eyebrow { justify-content: center; }
 .rule { display: inline-block; width: 64px; height: 1px; background: var(--gold); vertical-align: middle; }
 .rule.orn { display: block; position: relative; width: 140px; margin: 22px auto 0; }
 .rule.orn::after { content: ''; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; border: 1px solid var(--gold); background: var(--cream); transform: translate(-50%, -50%) rotate(45deg); }
@@ -179,7 +179,11 @@ html:not(.js) #pre { display: none; }
 
 /* ---------- 3 originals ---------- */
 .originals { position: relative; padding: 110px 0 120px; background: var(--sand); overflow: hidden; }
-.etch { position: absolute; top: 20px; width: min(32vw, 430px); opacity: .9; mix-blend-mode: multiply; pointer-events: none; }
+.etch { position: absolute; top: 40px; width: min(28vw, 400px); opacity: .65; mix-blend-mode: multiply; pointer-events: none;
+  /* paper → white so multiply hides it; edges fade into the sand instead of showing a box */
+  filter: brightness(.85) contrast(1.6);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 22%, #000 78%, transparent), linear-gradient(transparent, #000 20%, #000 70%, transparent);
+  -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent, #000 22%, #000 78%, transparent), linear-gradient(transparent, #000 20%, #000 70%, transparent); mask-composite: intersect; }
 .etch-l { left: 0; clip-path: inset(0 calc(100% - min(var(--p, 1) * 220%, 100%)) 0 0); }
 .etch-r { right: 0; clip-path: inset(0 0 0 calc(100% - min(var(--p, 1) * 220%, 100%))); }
 .sec-head { position: relative; margin-bottom: 56px; }

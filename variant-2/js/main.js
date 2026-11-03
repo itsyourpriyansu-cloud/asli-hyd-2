@@ -190,13 +190,15 @@ const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>'
 function renderEvents() {
   const list = upcoming(EVENTS, evQ.value, today);
   evList.innerHTML = list.length
-    ? list.map((ev) => `<li><a href="/conventions/${ev.slug}"><b>${esc(ev.name)}</b><small>${ev.dates} · ${esc(ev.venue)}</small></a></li>`).join('')
+    ? list.map((ev) => `<li><a href="#plan"><b>${esc(ev.name)}</b><small>${ev.dates} · ${esc(ev.venue)}</small></a></li>`).join('')
     : `<li class="ev-empty">${evQ.value ? 'No upcoming event matches that search.' : 'No upcoming conventions are listed yet.'} See all conventions, or tell us your event in the form below and we'll plan around it.</li>`;
 }
 evQ.addEventListener('input', renderEvents);
 $('#find-event').addEventListener('click', () => { renderEvents(); drawer.showModal(); });
 $('#drawer-x').addEventListener('click', () => drawer.close());
-drawer.addEventListener('click', (e) => { if (e.target === drawer) drawer.close(); });
+drawer.addEventListener('click', (e) => { if (e.target === drawer || e.target.closest('a')) drawer.close(); });
+// placeholder links (Privacy, Terms) stay idle instead of jumping to the top
+document.addEventListener('click', (e) => { if (e.target.closest('a[href="#"]')) e.preventDefault(); });
 
 /* ---------- plan form: validate, then hand off to WhatsApp or email (no backend yet) ---------- */
 const form = $('#plan-form');
