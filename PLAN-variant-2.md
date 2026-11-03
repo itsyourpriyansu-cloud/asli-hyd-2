@@ -48,7 +48,7 @@ Variant 1 is an editorial, cream/ink, 15-section page that alternates light and 
 
 ### 4.1 Global system
 
-- **Stack:** static `index.html` + `css/` + `js/motion.js`, same as variant 1. GSAP 3.12.5 + ScrollTrigger + Lenis 1.1.x from cdnjs/jsdelivr. No framework.
+- **Stack:** static `index.html` + `css/` + `js/motion.js`, same as variant 1. GSAP 3.12.5 + ScrollTrigger + Lenis 1.1.x from cdnjs/jsdeli vr. No framework.
 - **Smooth scroll:** Lenis, `lerp: 0.09`, `wheelMultiplier: 1`; disabled on touch (native momentum).
 - **Easing tokens:** `--ease-out: cubic-bezier(.22,1,.36,1)` (reveals), `--ease-io: cubic-bezier(.65,0,.35,1)` (slides, doors), `--ease-soft: cubic-bezier(.33,1,.68,1)` (hover).
 - **Duration tokens:** hover 0.35s · reveal 0.9s · image 1.2s · hero slide 1.6s.

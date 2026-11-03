@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 1000" preserveAspectRatio="xMidYMid slice">
+  <!-- Left leaf of a teak royal gate (hinge on the left, knocker on the meeting edge); the right leaf is this mirrored in CSS -->
+  <defs>
+    <filter id="grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.09 0.003" numOctaves="4" seed="7"/>
+      <feColorMatrix values="0.55 0 0 0 0.02  0.32 0 0 0 0.01  0.16 0 0 0 0  0 0 0 0 1"/>
+    </filter>
+    <radialGradient id="brass" cx="35%" cy="32%" r="70%">
+      <stop offset="0" stop-color="#fbe7b4"/><stop offset=".35" stop-color="#d4a457"/><stop offset=".8" stop-color="#7a5220"/><stop offset="1" stop-color="#3d270c"/>
+    </radialGradient>
+    <linearGradient id="iron" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4b443d"/><stop offset=".45" stop-color="#2a2521"/><stop offset="1" stop-color="#15120f"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity=".55"/><stop offset=".25" stop-color="#000" stop-opacity=".1"/><stop offset=".7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/>
+    </linearGradient>
+    <linearGradient id="vshade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".2" stop-color="#000" stop-opacity="0"/><stop offset=".8" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/>
+    </linearGradient>
+    <pattern id="spikes" x="40" y="0" width="62" height="40" patternUnits="userSpaceOnUse">
+      <ellipse cx="33" cy="25" rx="12" ry="5" fill="#000" opacity=".45"/>
+      <circle cx="31" cy="20" r="12" fill="url(#brass)"/>
+      <circle cx="31" cy="20" r="4.5" fill="#fff4d6" opacity=".55"/>
+    </pattern>
+    <pattern id="jali" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="26" height="26" fill="none" stroke="#c99a52" stroke-width="2"/>
+      <circle cx="13" cy="13" r="3" fill="#c99a52"/>
+    </pattern>
+    <clipPath id="arch"><path d="M78 330V205Q78 105 250 62Q422 105 422 205V330Z"/></clipPath>
+  </defs>
+
+  <!-- teak planks -->
+  <rect width="500" height="1000" filter="url(#grain)"/>
+  <g stroke="#160b04" stroke-width="3">
+    <path d="M125 0V1000M250 0V1000M375 0V1000"/>
+  </g>
+  <g stroke="#e8b878" stroke-opacity=".12" stroke-width="1.5">
+    <path d="M128 0V1000M253 0V1000M378 0V1000"/>
+  </g>
+
+  <!-- carved frame -->
+  <rect x="14" y="14" width="472" height="972" fill="none" stroke="#2a1608" stroke-width="28"/>
+  <rect x="31" y="31" width="438" height="938" fill="none" stroke="#c99a52" stroke-opacity=".75" stroke-width="2.5"/>
+  <rect x="38" y="38" width="424" height="924" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="2"/>
+
+  <!-- pointed Qutb Shahi arch panel with brass jali -->
+  <g clip-path="url(#arch)">
+    <rect x="70" y="55" width="360" height="280" fill="#1a0d05" opacity=".55"/>
+    <rect x="70" y="55" width="360" height="280" fill="url(#jali)" opacity=".7"/>
+  </g>
+  <path d="M78 330V205Q78 105 250 62Q422 105 422 205V330Z" fill="none" stroke="#d9ad66" stroke-width="5"/>
+  <path d="M92 330V208Q92 118 250 78Q408 118 408 208V330" fill="none" stroke="#7a5220" stroke-width="2"/>
+  <circle cx="250" cy="62" r="9" fill="url(#brass)"/>
+
+  <!-- iron straps with brass spikes -->
+  <g>
+    <rect x="44" y="360" width="412" height="40" fill="url(#iron)"/>
+    <rect x="44" y="520" width="412" height="40" fill="url(#iron)"/>
+    <rect x="44" y="680" width="412" height="40" fill="url(#iron)"/>
+    <rect x="44" y="840" width="412" height="40" fill="url(#iron)"/>
+  </g>
+  <g fill="url(#spikes)">
+    <rect x="44" y="360" width="412" height="40"/>
+    <rect x="44" y="520" width="412" height="40"/>
+    <rect x="44" y="680" width="412" height="40"/>
+    <rect x="44" y="840" width="412" height="40"/>
+  </g>
+
+  <!-- rows of smaller studs between the straps -->
+  <g fill="url(#brass)">
+    <g id="row">
+      <circle cx="71" cy="440" r="5"/><circle cx="133" cy="440" r="5"/><circle cx="195" cy="440" r="5"/><circle cx="257" cy="440" r="5"/><circle cx="319" cy="440" r="5"/><circle cx="381" cy="440" r="5"/>
+    </g>
+    <use href="#row" y="40"/><use href="#row" y="160"/><use href="#row" y="200"/><use href="#row" y="320"/><use href="#row" y="360"/>
+  </g>
+
+  <!-- ring knocker on the meeting edge -->
+  <g transform="translate(430 600)">
+    <circle r="26" fill="#000" opacity=".35" cx="3" cy="4"/>
+    <circle r="24" fill="url(#brass)"/>
+    <circle r="11" fill="#5e3d17"/>
+    <circle r="34" cy="40" fill="none" stroke="#000" stroke-opacity=".4" stroke-width="9"/>
+    <circle r="34" cy="37" fill="none" stroke="url(#brass)" stroke-width="7"/>
+  </g>
+
+  <!-- light falloff -->
+  <rect width="500" height="1000" fill="url(#shade)"/>
+  <rect width="500" height="1000" fill="url(#vshade)"/>
+</svg>

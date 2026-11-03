@@ -44,7 +44,7 @@ em { font-style: italic; color: var(--bronze); }
 .lead { font: 400 clamp(19px, 1.5vw, 22px)/1.5 var(--serif); color: var(--text); margin-top: 22px; max-width: 620px; }
 .center .lead, .lead.center { margin-inline: auto; }
 .eyebrow { display: flex; align-items: center; gap: 16px; font: 500 12px/1 var(--sans); letter-spacing: .32em; text-transform: uppercase; color: var(--bronze); margin-bottom: 22px; }
-.eyebrow.center, .sec-head.center .eyebrow { justify-content: center; }
+.eyebrow.center { justify-content: center; }
 .rule { display: inline-block; width: 64px; height: 1px; background: var(--gold); vertical-align: middle; }
 .rule.orn { display: block; position: relative; width: 140px; margin: 22px auto 0; }
 .rule.orn::after { content: ''; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; border: 1px solid var(--gold); background: var(--cream); transform: translate(-50%, -50%) rotate(45deg); }
@@ -263,8 +263,10 @@ html:not(.js) #pre { display: none; }
 .pa-text .btn { margin-top: 36px; opacity: clamp(0, (var(--p, 1) - .55) * 6, 1); }
 .pa-scene { --pp: min(var(--p, 1) * 1.5, 1); position: relative; perspective: 1600px; overflow: hidden; }
 .pa-court { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(calc(1.12 - var(--pp) * .12)); filter: brightness(calc(.55 + var(--pp) * .45)); }
-/* shortcut: CSS-drawn doors stand in for the generated P2/P3 door images, swap the background for them */
-.door { position: absolute; top: 0; bottom: 0; width: 50%; background: radial-gradient(circle, #d8b77d 0 2px, transparent 2.6px) 17px 17px / 34px 34px, linear-gradient(90deg, #24160c, #4a2e18 45%, #3a2412 55%, #24160c); box-shadow: inset 0 0 0 18px #2e1c0f, inset 0 0 0 20px rgba(197,154,91,.6), inset 0 0 0 46px #3a2412, inset 0 0 0 47px rgba(197,154,91,.45); backface-visibility: hidden; }
+.door { position: absolute; top: 0; bottom: 0; width: 50%; backface-visibility: hidden; box-shadow: 0 0 40px rgba(0,0,0,.5); }
+/* the leaf art is drawn hinge-left; the right leaf mirrors it on a child so the 3D swing keeps its own transform */
+.door::before { content: ''; position: absolute; inset: 0; background: url(../img/door.svg) center / cover; }
+.door-r::before { transform: scaleX(-1); }
 .door-l { left: 0; transform-origin: left center; transform: rotateY(calc(var(--pp) * -80deg)); }
 .door-r { right: 0; transform-origin: right center; transform: rotateY(calc(var(--pp) * 80deg)); }
 
@@ -336,7 +338,7 @@ html:not(.js) #pre { display: none; }
 
 /* ---------- 10 plan ---------- */
 .plan { position: relative; padding: 130px 0; background: var(--cream); overflow: hidden; }
-.plan-media { position: absolute; left: 0; bottom: 0; width: 56%; height: 58%; -webkit-mask-image: linear-gradient(0deg, #000 70%, transparent); mask-image: linear-gradient(0deg, #000 70%, transparent); }
+.plan-media { position: absolute; left: 0; bottom: 0; width: 100%; height: 58%; -webkit-mask-image: linear-gradient(0deg, #000 70%, transparent); mask-image: linear-gradient(0deg, #000 70%, transparent); }
 .plan-media img { width: 100%; height: 100%; object-fit: cover; transform: translateY(calc((.5 - var(--p, .5)) * 10%)); }
 .plan-grid { position: relative; display: grid; grid-template-columns: 1fr minmax(0, 560px); gap: clamp(32px, 5vw, 80px); align-items: start; }
 .plan-text .mini { margin-top: 40px; }
@@ -391,6 +393,13 @@ main { position: relative; z-index: 1; background: var(--cream); }
 .wa.show { opacity: 1; transform: none; pointer-events: auto; }
 
 /* ---------- responsive ---------- */
+/* workshops + testimonials fit the content width on desktop; below 1024px they stay swipe rails */
+@media (min-width: 1024px) {
+  .rail.drag { display: grid; grid-template-columns: repeat(4, 1fr); width: min(1240px, 100% - 32px); margin-inline: auto; padding: 6px 0 26px; overflow: visible; cursor: auto; }
+  .rail.drag > * { width: auto; }
+  .workshops .arrows, .voices .arrows { display: none; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) { .rail.drag { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 1279px) {
   .hdr-nav { gap: 24px; }
   .hdr-nav > a { font-size: 17px; }

@@ -118,7 +118,7 @@ $$('.rail').forEach((rail) => {
   if (rail.classList.contains('drag')) {
     let x0 = 0, s0 = 0, down = false, moved = false;
     rail.addEventListener('pointerdown', (e) => {
-      if (e.pointerType !== 'mouse') return; // touch keeps native momentum scrolling
+      if (e.pointerType !== 'mouse' || rail.scrollWidth <= rail.clientWidth) return; // touch keeps native momentum; nothing to drag when cards fit
       down = true; moved = false; x0 = e.clientX; s0 = rail.scrollLeft;
     });
     const end = () => {
